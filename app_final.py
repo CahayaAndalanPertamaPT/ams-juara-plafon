@@ -5,7 +5,7 @@ import os
 
 st.set_page_config(page_title="AMS - JUARA PLAFON", layout="wide")
 
-# Menggunakan folder /tmp agar pasti diizinkan menulis file oleh server Streamlit Cloud
+# Perbaikan di sini: Menggunakan folder /tmp agar diizinkan menyimpan file oleh server
 FILE_DB = "/tmp/database_pvc.csv"
 
 def muat_data():
@@ -18,7 +18,6 @@ def muat_data():
     return pd.DataFrame(columns=kolom)
 
 def simpan_data(df):
-    # Pastikan folder penyimpanan tersedia sebelum menyimpan file
     if os.path.dirname(FILE_DB):
         os.makedirs(os.path.dirname(FILE_DB), exist_ok=True)
     df.to_csv(FILE_DB, index=False)
