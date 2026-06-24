@@ -6,7 +6,6 @@ import os
 st.set_page_config(page_title="AMS - JUARA PLAFON", layout="wide")
 
 FILE_DB = "D:/Downloads/database_pvc.csv"
-
 def muat_data():
     kolom = ["Batch ID (Code)", "Tanggal", "Nama Barang", "Ukuran", "Tipe Transaksi", "Stok", "Harga Satuan (Rp)", "Keterangan", "Oleh Pengguna"]
     if os.path.exists(FILE_DB):
