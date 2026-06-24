@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="AMS - JUARA PLAFON", layout="wide")
 
 # Perbaikan di sini: Menggunakan folder /tmp agar diizinkan menyimpan file oleh server
-FILE_DB = "/tmp/database_pvc.csv"
+FILE_DB = "database_pvc.csv"
 
 def muat_data():
     kolom = ["Batch ID (Code)", "Tanggal", "Nama Barang", "Ukuran", "Tipe Transaksi", "Stok", "Harga Satuan (Rp)", "Keterangan", "Oleh Pengguna"]
